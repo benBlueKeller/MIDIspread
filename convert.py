@@ -20,7 +20,7 @@ def to_notelist(
                 [
                     find_time(point[0]),
                     find_pitch(point[1]) if len(point) > 1 else find_pitch(point[0]),
-                    find_velocity(point[1]) if len(point) > 2 else find_velocity(),
+                    find_velocity(point[2]) if len(point) > 2 else find_velocity(),
                     find_duration(point[3]) if len(point) > 3 else find_duration(),
                 ]
             )
