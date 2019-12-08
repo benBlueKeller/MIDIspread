@@ -1,7 +1,6 @@
 # from xlrd import open_workbook
 from miditime.miditime import MIDITime
 
-data = [1, 2, 3, 4, 5, 6, 7]
 midi = MIDITime(120, "midi.mid", 5, 5, 1)
 
 
@@ -32,5 +31,7 @@ def to_notelist(
     return notelist
 
 
-midi.add_track(to_notelist(data))
-midi.save_midi()
+if __name__ == "__main__":
+    data = [1, 2, 3, 4, 5, 6, 7]
+    midi.add_track(to_notelist(data))
+    midi.save_midi()
