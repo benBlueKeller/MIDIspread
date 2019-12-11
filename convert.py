@@ -33,6 +33,22 @@ def to_notelist(
 
 
 if __name__ == "__main__":
-    data = get_range("1YkaCukkp0w-enqqJCDNgjbM3PKimfr6Ic6lo_02PSM0", "periodic!B2:E119")
-    midi.add_track(to_notelist(data))
+
+    def str_range_to_ints(range):
+        new = []
+        for row in range:
+            ints = []
+            for cell in row:
+                ints.append(int(cell))
+            new.append(ints)
+        return new
+
+    data = get_range("1YkaCukkp0w-enqqJCDNgjbM3PKimfr6Ic6lo_02PSM0", "periodic!B2:D119")
+    midi.add_track(
+        to_notelist(
+            str_range_to_ints(data),
+            find_pitch=lambda pi: 81 - pi * 2,
+            find_velocity=lambda ve: 100 - ve,
+        )
+    )
     midi.save_midi()
