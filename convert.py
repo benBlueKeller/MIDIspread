@@ -1,5 +1,6 @@
 # from xlrd import open_workbook
 from miditime.miditime import MIDITime
+from sheets import get_range
 
 midi = MIDITime(120, "midi.mid", 5, 5, 1)
 
@@ -32,6 +33,6 @@ def to_notelist(
 
 
 if __name__ == "__main__":
-    data = [1, 2, 3, 4, 5, 6, 7]
+    data = get_range("1YkaCukkp0w-enqqJCDNgjbM3PKimfr6Ic6lo_02PSM0", "periodic!B2:E119")
     midi.add_track(to_notelist(data))
     midi.save_midi()
