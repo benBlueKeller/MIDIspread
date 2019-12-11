@@ -3,7 +3,7 @@
   2. (Usage)[#usage]
 
 #Introduction
-  dataMidi turns a dataset into a midi file.
+  MIDIspread turns a dataset into a midi file.
 
   Currently it accesses a periodic table google sheet and makes an incredibly repetitive audio representation of periodic table table in midi.mid.
 

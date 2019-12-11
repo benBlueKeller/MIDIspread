@@ -10,7 +10,7 @@ SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
 SPREADSHEET_ID = '1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms'
-RANGE_NAME = 'Class Data!A2:E'
+RANGE_NAME = 'Class Data!A2:E119'
 
 
 def get_range(sheet_id, range):
