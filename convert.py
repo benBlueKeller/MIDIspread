@@ -2,6 +2,7 @@
 from miditime.miditime import MIDITime
 from sheets import get_range
 
+# MIDI Time(beats per minute, output file, seconds/year, base octave, octave's range)
 midi = MIDITime(120, "midi.mid", 5, 5, 1)
 
 
@@ -35,6 +36,10 @@ def to_notelist(
 if __name__ == "__main__":
 
     def str_range_to_ints(range):
+        """str_range_to_ints converts sheet schema to ints.
+
+        range-a list of lists for row in sheets
+        assumes all values are integars"""
         new = []
         for row in range:
             ints = []
@@ -43,12 +48,13 @@ if __name__ == "__main__":
             new.append(ints)
         return new
 
+    # get_Range is taking SPREADSHEET_ID and A1 notation for a range
     data = get_range("1YkaCukkp0w-enqqJCDNgjbM3PKimfr6Ic6lo_02PSM0", "periodic!B2:D119")
     midi.add_track(
         to_notelist(
             str_range_to_ints(data),
             find_pitch=lambda pi: 81 - pi * 2,
-            find_velocity=lambda ve: 100 - ve,
+            find_velocity=lambda ve: 100 - ve * 3,
         )
     )
     midi.save_midi()

@@ -9,5 +9,4 @@
 
 #Usage
   Python3.6 is currently recommended, but any version should be OK.
-  Clone into working directory and call:
-  `$python3.6 convert.py`
+  Clone into working directory and call: `$python3.6 convert.py`
