@@ -1,6 +1,6 @@
 ## Contents
-  1. (Introduction)[/introduction]
-  2. (Usage)[/usage]
+  1. (Introduction)[/README.md#introduction]
+  2. (Usage)[/README.md#usage]
 
 # Introduction
   MIDIspread turns a dataset into a midi file.
