@@ -1,5 +1,5 @@
 ## Contents
-  1. (Introduction)[master/README.md#introduction]
+  1. (Introduction)[../README.md#introduction]
   2. (Usage)[master/README.md#usage]
 
 # Introduction
