@@ -42,8 +42,8 @@ class Convert:
         # (beats per min, output file, sec/year, base octave, octaves in range)
         self.miditime = MIDITime(self.bpm, "midi.mid", 5, 5, 1)
 
-    def to_notelist(self):
-        """to_notelist takes a string of data and optional modifier functions for
+    def get_notelist(self):
+        """get_notelist takes self.data_list and the class Convert's modifier functions for
         time, pitch, velocity, and duration then returns a list of notes"""
         notelist = []
         for point in self.data_list:
@@ -73,29 +73,29 @@ class Convert:
                 )
         return notelist
 
+    def sheets_to_data(self):
+        def str_range_to_ints(range):
+            """str_range_to_ints converts sheet schema to ints.
+
+            range-a list of lists for row in sheets
+            assumes all values are integars"""
+            new = []
+            for row in range:
+                ints = []
+                for cell in row:
+                    ints.append(int(cell))
+                new.append(ints)
+            return new
+
+        str_range = get_range(self.spreadsheet_id, self.range)
+        self.data_list = str_range_to_ints(str_range)
+        return self.data_list
+
+    def data_to_file(self):
+        self.miditime.add_track(self.get_notelist())
+        self.miditime.save_midi()
+
 
 if __name__ == "__main__":
-
-    def str_range_to_ints(range):
-        """str_range_to_ints converts sheet schema to ints.
-
-        range-a list of lists for row in sheets
-        assumes all values are integars"""
-        new = []
-        for row in range:
-            ints = []
-            for cell in row:
-                ints.append(int(cell))
-            new.append(ints)
-        return new
-
-    # get_Range is taking SPREADSHEET_ID and A1 notation for a range
-    data = get_range("1YkaCukkp0w-enqqJCDNgjbM3PKimfr6Ic6lo_02PSM0", "periodic!B2:D119")
-    miditime.add_track(
-        to_notelist(
-            str_range_to_ints(data),
-            find_pitch=lambda pi: 81 - pi * 2,
-            find_velocity=lambda ve: 100 - ve * 3,
-        )
-    )
-    self.miditime.save_midi()
+    dataMIDI = Convert()
+    dataMIDI.data_to_file()
