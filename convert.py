@@ -10,14 +10,15 @@ class Convert:
         spreadsheet_id (str): id of google sheet
         range (str): sheet range in a1 notation for notes
         bpm (int): beats per minute for the midi output
-        find_time(function, optional): conversion function for time;
+        find_time(function): conversion function for time;
             the output will be when a note happens
-        find_pitch(function, optional): conversion function for pitch;
+        find_pitch(function): conversion function for pitch;
             how high or low is it?
-        find_velocity(function, optional): conversion function for velocity;
+        find_velocity(function): conversion function for velocity;
             how stong?
-        find_duration(function, optional): conversion function for duration;
+        find_duration(function): conversion function for duration;
             how long?
+        miditime(MIDITime instance): use the
     """
 
     def __init__(
@@ -43,7 +44,6 @@ class Convert:
         # (beats per min, output file, sec/year, base octave, octaves in range)
         self.miditime = MIDITime(self.bpm, save_path, 5, 5, 1)
         self.sheets_to_data()
-        self.data_to_file()
 
     def get_notelist(self):
         """get_notelist takes self.data_list and the class Convert's modifier functions for
