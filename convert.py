@@ -100,5 +100,8 @@ class Convert:
 
 
 if __name__ == "__main__":
-    dataMIDI = Convert()
+    """example with periodic table"""
+    dataMIDI = Convert(
+        find_pitch=lambda pi: 81 - pi * 2, find_velocity=lambda ve: 100 - ve * 4,
+    )
     dataMIDI.data_to_file()
