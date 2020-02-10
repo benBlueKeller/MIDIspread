@@ -18,7 +18,10 @@ class Convert:
             how stong?
         find_duration(function): conversion function for duration;
             how long?
-        miditime(MIDITime instance): use the
+        miditime(MIDITime instance): from CIR (github.com/cirlabs/miditime);
+            initialized on __init__
+        data_list(:list: :list: int): list given to miditime.add_track
+            in data_to_file; created in sheets_to_data
     """
 
     def __init__(
