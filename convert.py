@@ -25,6 +25,7 @@ class Convert:
         spreadsheet_id="1YkaCukkp0w-enqqJCDNgjbM3PKimfr6Ic6lo_02PSM0",
         range="periodic!B2:D119",
         bpm=120,
+        save_path="midi.mid",
         find_time=lambda ti: ti,
         find_pitch=lambda pi: pi,
         find_velocity=lambda ve=100: ve,
@@ -40,7 +41,9 @@ class Convert:
         self.find_velocity = find_velocity
 
         # (beats per min, output file, sec/year, base octave, octaves in range)
-        self.miditime = MIDITime(self.bpm, "midi.mid", 5, 5, 1)
+        self.miditime = MIDITime(self.bpm, save_path, 5, 5, 1)
+        self.sheets_to_data()
+        self.data_to_file()
 
     def get_notelist(self):
         """get_notelist takes self.data_list and the class Convert's modifier functions for
