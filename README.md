@@ -5,7 +5,7 @@
 # Introduction
   MIDIspread turns a dataset into a midi file.
 
-  Currently it accesses a periodic table google sheet and makes an incredibly repetitive audio representation of periodic table table in midi.mid.
+  Using [MIDITime](https://github.com/cirlabs/miditime), a [Google Sheet](https://sheets.google.com), and some instructions MIDIspread makes sound out of spreadsheets
 
 # Usage
   Python3.6 is currently recommended, but any version should be OK.
