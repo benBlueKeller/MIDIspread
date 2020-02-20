@@ -26,6 +26,6 @@
 
       > See the library's installation page for the alternative installation options.
 
-        [Link to installation page](https://github.com/googleapis/google-api-python-client)
+      *[Link to installation page](https://github.com/googleapis/google-api-python-client)*
 
   Clone into working directory and call: `$python3 convert.py`
