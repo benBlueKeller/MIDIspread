@@ -16,5 +16,11 @@
       >
       > In resulting dialog click DOWNLOAD CLIENT CONFIGURATION and save the file credentials.json to your working directory.
 
-  Python3.6 is currently recommended, but any version should be OK.
-  Clone into working directory and call: `$python3.6 convert.py`
+    - [Step 2](https://developers.google.com/docs/api/quickstart/python#step_2_install_the_google_client_library); I've found it best to install the pip packages one at a time.
+      > Run the following command to install the library using pip:
+      >
+      `$ pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib`
+      >
+      See the library's [installation page](https://github.com/googleapis/google-api-python-client) for the alternative installation options.
+
+  Clone into working directory and call: `$python3 convert.py`
