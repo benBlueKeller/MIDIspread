@@ -8,7 +8,7 @@
   Using [MIDITime](https://github.com/cirlabs/miditime), a [Google Sheet](https://sheets.google.com), and some instructions MIDIspread makes sound out of spreadsheets
 
 # Usage
-  For MIDIspread to use Google Sheets, a Google account is used to API must be enabled and clients library installed.
+  For MIDIspread to use Google Sheets, a Google account is used to API must be enabled and clients library installed. The first two steps in Google's Python Quickstart provide a simple guide.
 
 
   - [Step 1](https://developers.google.com/docs/api/quickstart/python#step_1_turn_on_the);
