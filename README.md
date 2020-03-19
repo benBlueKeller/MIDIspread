@@ -1,6 +1,8 @@
 ## Contents
   1. [Introduction](README.md#introduction)
   1. [Usage](README.md#usage)
+      1. [Installation](README.md#installation)
+      1. [Run](README.md#run)
 
 # Introduction
   MIDIspread turns a dataset into a midi file.
@@ -8,6 +10,9 @@
   Using [MIDITime](https://github.com/cirlabs/miditime), a [Google Sheet](https://sheets.google.com), and some instructions MIDIspread makes sound out of spreadsheets
 
 # Usage
+
+### Installation
+
   For MIDIspread to use Google Sheets, a Google account is used to API must be enabled and clients library installed. The first two steps in Google's Python Quickstart provide a simple guide.
 
 
@@ -27,5 +32,7 @@
       > See the library's installation page for the alternative installation options.
 
       *[Link to installation page](https://github.com/googleapis/google-api-python-client)*
+
+### Run
 
   Clone into working directory and call: `$python3 convert.py`
