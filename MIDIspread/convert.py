@@ -1,8 +1,8 @@
 # from xlrd import open_workbook
 from miditime.miditime import MIDITime
 
-# Below line throws error in development, but the alternative errors after deployment
-from MIDIspread.sheets import get_range
+# Below line throws error in deployment, change to MIDIspread.sheets
+from sheets import get_range
 
 
 class Convert:
