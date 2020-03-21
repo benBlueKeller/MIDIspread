@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="MIDIspread-ben",
-    version="0.0.1",
+    version="0.0.2",
     author="Ben Keller",
     author_email="benbluekeller@gmail.com",
     description="MIDIspread makes MIDI files with Google Sheets",

@@ -1,6 +1,6 @@
 # from xlrd import open_workbook
 from miditime.miditime import MIDITime
-from sheets import get_range
+from MIDIspread.sheets import get_range
 
 
 class Convert:
