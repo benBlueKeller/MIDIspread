@@ -41,7 +41,8 @@
 
 ### Run
 
-An example using the default periodic table: ```python
+An example using the default periodic table:
+```python
 from MIDIspread.convert import Convert
 converter = Convert(
       find_pitch=lambda pi: 81 - pi * 2, find_velocity=lambda ve: 100 - ve * 4,
