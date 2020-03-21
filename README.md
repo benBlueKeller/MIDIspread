@@ -50,17 +50,17 @@ converter = Convert(
 converter.data_to_file()
 ```
 The Convert class can turn a range  any four google sheets columns into a midi file using the following parameters:
-    - spreadsheet_id (str): id of google sheet
-    - range (str): sheet range in a1 notation for notes.
-        One to four columns can be used (with defaults for missing columns);
-        time in first column, pitch in second (or first),
-        velocity in third (or 100), duration in fourth (or 1).
-    - bpm (int): beats per minute for the midi output
-    - find_time(function): conversion function for time;
-        the output will be when a note happens
-    - find_pitch(function): conversion function for pitch;
-        how high or low is it?
-    - find_velocity(function): conversion function for velocity;
-        how strong?
-    - find_duration(function): conversion function for duration;
-        how long?
+* spreadsheet_id (str): id of google sheet
+* range (str): sheet range in a1 notation for notes.
+    One to four columns can be used (with defaults for missing columns);
+    time in first column, pitch in second (or first),
+    velocity in third (or 100), duration in fourth (or 1).
+* bpm (int): beats per minute for the midi output
+* find_time(function): conversion function for time;
+    the output will be when a note happens
+* find_pitch(function): conversion function for pitch;
+    how high or low is it?
+* find_velocity(function): conversion function for velocity;
+    how strong?
+* find_duration(function): conversion function for duration;
+    how long?
