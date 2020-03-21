@@ -10,7 +10,10 @@ class Convert:
 
     Attributes:
         spreadsheet_id (str): id of google sheet
-        range (str): sheet range in a1 notation for notes
+        range (str): sheet range in a1 notation for notes.
+            One to four columns can be used (with defaults for missing columns);
+            time in first column, pitch in second (or first),
+            velocity in third (or 100), duration in fourth (or 1).
         bpm (int): beats per minute for the midi output
         find_time(function): conversion function for time;
             the output will be when a note happens
