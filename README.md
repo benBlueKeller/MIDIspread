@@ -12,6 +12,12 @@
 # Usage
 
 ### Installation
+  Unstable version up on Test PyPI:
+  `$ pip install --index-url https://test.pypi.org/simple/ --upgrade --no-deps  MIDIspread-ben`
+
+  A few dependencies are needed as well:
+
+  `$ pip install miditime`
 
   For MIDIspread to use Google Sheets, a Google account is used to API must be enabled and clients library installed. The first two steps in Google's Python Quickstart provide a simple guide.
 
@@ -35,4 +41,10 @@
 
 ### Run
 
-  Clone into working directory and call: `$python3 convert.py`
+An example using the default periodic table: ```python
+from MIDIspread.convert import Convert
+converter = Convert(
+      find_pitch=lambda pi: 81 - pi * 2, find_velocity=lambda ve: 100 - ve * 4,
+)
+converter.data_to_file()
+```
