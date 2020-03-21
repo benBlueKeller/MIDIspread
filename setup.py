@@ -4,7 +4,7 @@ with open("README.md", "r") as fh:
     read_me = fh.read()
 
 setuptools.setup(
-    name="MIDIspread-ben",  # Replace with your own username
+    name="MIDIspread-ben",
     version="0.0.1",
     author="Ben Keller",
     author_email="benbluekeller@gmail.com",
