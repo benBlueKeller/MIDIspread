@@ -22,14 +22,14 @@
   For MIDIspread to use Google Sheets, a Google account is used to API must be enabled and clients library installed. The first two steps in Google's Python Quickstart provide a simple guide.
 
 
-  - [Step 1](https://developers.google.com/docs/api/quickstart/python#step_1_turn_on_the);
+  - [Step 1](https://developers.google.com/sheets/api/quickstart/python#step_1_turn_on_the);
 
       > Click [the "Enable the Google Docs API" shortcut] to create a new Cloud Platform project and automatically enable the Google Docs API:
 
       > In resulting dialog click DOWNLOAD CLIENT CONFIGURATION and save the file credentials.json to your working directory.
 
 
-  - [Step 2](https://developers.google.com/docs/api/quickstart/python#step_2_install_the_google_client_library); I've found it best to install the pip packages one at a time.
+  - [Step 2](https://developers.google.com/sheets/api/quickstart/python#step_2_install_the_google_client_library); I've found it best to install the pip packages one at a time.
 
       > Run the following command to install the library using pip:
 
